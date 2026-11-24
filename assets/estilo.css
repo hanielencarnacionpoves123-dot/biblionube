@@ -1,0 +1,80 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: #f2f5f9; color: #1f2937; }
+a { color: #1d4ed8; text-decoration: none; }
+
+/* Barra superior */
+.barra { display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  background: #1e3a8a; color: #fff; padding: 12px 24px; }
+.barra .marca { font-weight: 700; font-size: 20px; }
+.barra nav { display: flex; gap: 4px; flex: 1; flex-wrap: wrap; }
+.barra nav a { color: #dbeafe; padding: 6px 12px; border-radius: 6px; }
+.barra nav a.activo, .barra nav a:hover { background: #2563eb; color: #fff; }
+.barra .sesion { font-size: 14px; }
+.barra .sesion a { color: #fde68a; }
+
+.contenedor { max-width: 1400px; margin: 24px auto; padding: 0 16px; }
+h1 { margin-top: 0; color: #1e3a8a; }
+h2 { font-size: 18px; color: #1e3a8a; }
+
+/* Tarjetas del panel */
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.tarjeta { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  border-left: 5px solid #2563eb; color: #475569; }
+.tarjeta span { display: block; font-size: 32px; font-weight: 700; color: #1e3a8a; }
+.tarjeta.roja { border-left-color: #dc2626; }
+.tarjeta.roja span { color: #dc2626; }
+
+/* Layout formulario + tabla */
+.dos-col { display: grid; grid-template-columns: 320px 1fr; gap: 24px; align-items: start; }
+@media (max-width: 850px) { .dos-col { grid-template-columns: 1fr; } }
+
+.formulario { background: #fff; padding: 18px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+label { display: block; font-size: 14px; margin-bottom: 10px; color: #334155; }
+input, select { width: 100%; padding: 8px 10px; margin-top: 4px; border: 1px solid #cbd5e1;
+  border-radius: 6px; font-size: 14px; }
+input:focus, select:focus { outline: 2px solid #93c5fd; border-color: #2563eb; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08); font-size: 14px; }
+th { background: #e0e7ff; color: #1e3a8a; text-align: left; padding: 10px; }
+td { padding: 9px 10px; border-top: 1px solid #e5e7eb; vertical-align: middle; }
+tr:hover td { background: #f8fafc; }
+.acciones, .nw { white-space: nowrap; }
+.acciones form { display: inline; }
+
+/* Botones */
+.btn { display: inline-block; padding: 8px 14px; border: 1px solid #cbd5e1; background: #fff; color: #1f2937;
+  border-radius: 6px; cursor: pointer; font-size: 14px; }
+.btn:hover { background: #f1f5f9; }
+.btn.primario { background: #2563eb; border-color: #2563eb; color: #fff; }
+.btn.primario:hover { background: #1d4ed8; }
+.btn.peligro { background: #fee2e2; border-color: #fecaca; color: #b91c1c; }
+.btn.chico { padding: 4px 9px; font-size: 13px; }
+.btn.ancho { width: 100%; margin-top: 6px; }
+
+.buscador { display: flex; gap: 8px; margin-bottom: 12px; }
+.buscador input { margin: 0; }
+.filtros { margin-bottom: 12px; display: flex; gap: 6px; }
+
+/* Etiquetas de estado */
+.etiqueta { padding: 3px 9px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.etiqueta.verde { background: #dcfce7; color: #166534; }
+.etiqueta.naranja { background: #ffedd5; color: #9a3412; }
+.etiqueta.roja { background: #fee2e2; color: #991b1b; }
+
+/* Alertas */
+.alerta { padding: 10px 14px; border-radius: 8px; margin-bottom: 16px; }
+.alerta.ok { background: #dcfce7; color: #166534; }
+.alerta.error { background: #fee2e2; color: #991b1b; }
+
+.info { margin-top: 18px; font-size: 13px; color: #64748b; }
+.pie { text-align: center; font-size: 12px; color: #64748b; padding: 20px; }
+
+/* Login */
+.login-fondo { min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb 60%, #38bdf8); padding: 16px; }
+.login-caja { background: #fff; padding: 32px; border-radius: 14px; width: 100%; max-width: 360px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.login-caja h1 { text-align: center; margin-bottom: 4px; }
+.login-caja .sub { text-align: center; color: #64748b; margin-top: 0; }
+.login-caja .ayuda { text-align: center; font-size: 13px; color: #64748b; }
