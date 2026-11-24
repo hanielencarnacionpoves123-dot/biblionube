@@ -1,0 +1,5 @@
+# Sin listado de carpetas
+Options -Indexes
+
+# Bloquear acceso web a carpetas y archivos internos
+RedirectMatch 403 ^/(bd|config|includes|docker|\.git|\.env|Dockerfile|docker-compose\.yml)(/|$)
